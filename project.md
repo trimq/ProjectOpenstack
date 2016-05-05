@@ -16,7 +16,7 @@
 
 <a name="kientruc"></a>
 #####1.Kiến trúc của Openstack:
-<img src="https://dague.net/wp-content/uploads/2014/08/screenshot_185.png">
+<img src="http://docs.openstack.org/admin-guide/_images/openstack-arch-kilo-logical-v1.png">
 
 <a name="project"></a>
 ####2.Các project của Openstack:
