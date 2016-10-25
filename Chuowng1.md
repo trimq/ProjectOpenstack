@@ -22,7 +22,7 @@
 
 ----------------------------------------------------------------------------
 
-<a name="1></a>
+<a name="1"></a>
 ##1. Nhu cầu của việc lưu trữ hiện nay:
 Ngày nay nhu cầu sử dụng và truy cập dữ liệu của các công ty và tổ chức tăng cao, người sử dụng cũng tạo ra nhiều kiểu dữ liệu gọi là unstructured data 
 như online video, gaming, Software-as-a-Service...Khiến cho hệ thống lưu trữ cần được mở rộng để phát triển và truy cập dễ dàng. Unstructures data là những dữ liệu không có 1 cấu trúc nhất
