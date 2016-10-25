@@ -97,7 +97,7 @@ Hệ thống object storage sẽ được cung cấp 1 single namespace, giúp c
 <a name="4"></a>
 ##4. Kiến trúc lưu trữ kiểu mới: SDS (Software-Define Storage)
 
-Lịch sử của việc lưu trữ dữ liệu trong các mainframe, sau đó các thiết bị lưu trữ này được tách ra khỏi mainframe sử dụng 1 bộ điều khiến, tuy nhiên là với việc những dữ liệu ngày càng nhiều đã phá vỡ cấu trúc của 1 bộ điều khiển có thể quản lý vì vậy cần có 1 kiến trúc lưu trữ kiểu mới để có thể làm việc được với nhiều dữ liệu như hiện nay
+Lịch sử của việc lưu trữ dữ liệu bắt đầu khi các thiết bị lưu trữ kết nối trong các mainframe, sau đó các thiết bị lưu trữ này được tách ra khỏi mainframe sử dụng 1 bộ điều khiến, tuy nhiên là với việc những dữ liệu ngày càng nhiều đã phá vỡ cấu trúc của 1 bộ điều khiển có thể quản lý vì vậy cần có 1 kiến trúc lưu trữ kiểu mới để có thể làm việc được với nhiều dữ liệu như hiện nay
 
 Các hệ thống lưu trữ trước đây thường chạy trên các phần cứng được tùy chỉnh và sử dụng dụng phần mềm đóng, điều này làm cho việc bảo trì và di chuyển trở nên khó khăn và cần phải kiểm soát rất chặt chẽ để ngăn ngừa hỏng hóc
 
@@ -138,6 +138,30 @@ Có vai trò điều phối truy cập vào các nodes lưu trữ, tách biệt 
 - SDS tách biệt phần cứng ra khỏi phần mềm giúp cho việc sử dụng nhiều loại ổ cứng trong cùng 1 hệ thống, cho phép hệ thống có thể tích hợp những công nghệ mới
 
 -  Giải pháp SDS thường là mã nguồn mở, giúp cho người dùng có nhiều công cụ và tránh việc phải bó buộc vào 1 nhà sản xuất. Giúp cho chúng ta có thể xây dựng các ứng dụng có thể tương thích với nhiều phần cứng hơn.
+
+<a name="6"></a>
+##6. Tại sao lại lựa chọn Swift?
+
+- Swift cung cấp 1 khoảng rộng mục đích sử dụng, người dùng có thể truy cập vào hệ thống lưu trữ thông qua giao thức HTTP hoặc sử dụng 1 số phương thức khác để lưu trữ dữ liệu như command-line tools, filesystem gateways..
+
+-  Swift sử dụng object storage và chỉ ưu tiên tính nhất quán của dữ liệu cuối cùng do vậy tải trọng và tính sẵn sàng của dữ liệu rất cao ( định lý CAP) => cho phép đọc ghi dữ liệu nhanh chóng => cho phép Swift có khả năng mở rộng cho phép rất nhiều kết nối thực hiện đồng thời
+
+Swift ngày càng được nhiều người đóng góp phát triển nhanh mạnh hơn, nhiều tính năng tốt hơn
+
+- Swift có thể triển khai trên các phần cứng thông thường, do đó có thể xây dựng hệ thống với giá rẻ hơn. Swift cung cấp logical software để quản lý đó là SDS giúp cho hệ thống có sự linh hoạt về việc triển khai hệ thống lưu trữ
+
+- Swift còn là 1 kiểu mới trong hệ thống storage, không phải là 1 hệ thống nguyên khối mà là 1 hệ thống phân tán. Swift không làm theo những hệ thống storage khác, đó là kết quả của sự thay đổi cách thức lưu trữ dữ liệu.
+
+- Swift phù hợp với rất nhiều ứng dụng ngày nay và đang được phát triển thành 1 chuẩn lưu trữ
+
+<a name="7"></a>
+##7. Kết luận:
+
+Sự thay đổi của các dạng lưu trữ và các kiểu dữ liệu bởi sự xuất hiện của web và ứng dụng di động làm tăng lượng dữ liệu do người dùng, các nhà sản xuất,cung cấp dịch vụ...làm lượng dữ liệu tăng lên nhanh chóng. Để đáp ứng được như cầu đó cần phát triển 1 kiến trúc lưu trữ mới là SDS giúp cho hệ thống lưu trữ trở nên linh hoạt hơn giảm chi phí xây dựng hệ thống, không cần quá phụ thuộc vào phần cứng
+
+Swift có khả năng đáp ứng được các yêu cầu trên trong việc lưu trữ dữ liệu hiện nay, ở chương tiếp theo sẽ đi sâu vào tính năng, đặc điểm, kiến trúc và lợi ích mà Swift mang lại.
+
+
 
 
 
