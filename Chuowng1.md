@@ -26,7 +26,7 @@
 ##1. Nhu cầu của việc lưu trữ hiện nay:
 Ngày nay nhu cầu sử dụng và truy cập dữ liệu của các công ty và tổ chức tăng cao, người sử dụng cũng tạo ra nhiều kiểu dữ liệu gọi là unstructured data 
 như online video, gaming, Software-as-a-Service...Khiến cho hệ thống lưu trữ cần được mở rộng để phát triển và truy cập dễ dàng. Unstructures data là những dữ liệu không có 1 cấu trúc nhất
- định như là image, videos, documents...được lưu trữ dưới dạng file trái ngược với kiểu dữ liệu được truy cập trong database(thường là dữ liệu có cấu trúc). 
+ định như là image, videos, documents...được lưu trữ dưới dạng file trái với kiểu dữ liệu được truy cập trong database (thường là dữ liệu có cấu trúc). 
  Những dữ liệu này được tạo ra bởi rất nhiều các thiết bị được kết nối với internet
  
  
@@ -59,6 +59,26 @@ Lưu trữ unstructured data cần đảm bảo được 4 yếu tố sau: Durab
 ##2. No One-Size-Fits-All Storage System:
 Giải pháp one-size-fits-all là rất hay tuy nhiên mỗi hệ thống lưu trữ cần có giải pháp riêng phù hợp với yêu cầu và hoàn cảnh cụ thể theo định lý CAP. 
 Định lý CAP nói rằng hệ thống máy tính phân tán không đồng thời cũng cấp được: Consistency, Availability, Partition tolerance
+
+- <b>Consistency</b>
+Tính nhất quán. Tất cả khách hàng có thể thấy cùng 1 phiên bản của dữ liệu trong cùng khoảng thời gian
+Ví dụ trong 1 hệ thống có nhiều nodes, dữ liệu trên các nodes sẽ được đồng bộ với nhau
+
+- <b>Availability</b>
+Tính sẵn sàng. Khi đọc hoặc viết trên hệ thống cần đảm bảo được phản hồi
+Ví dụ trong hệ thống máy tính phân phối có nhiều nodes, khi có 1 node bị hỏng thì hệ thống vẫn hoạt động bình thường, khách hàng vẫn có thể truy cập vào dữ liệu
+
+- <b>Partition tolerance</b>:
+Khả năng phân vung. Hệ thống làm việc khi mạng hoạt động không ổn định
+Ví dụ giữa các nodes mất kết nối với nhau thì hệ thống vẫn phải hoạt động bình thường
+
+ Khi triển khai thực tế 1 hệ thống máy tính phân tán, ta sẽ phải chọn 2 đặc tính trên bởi vì partition tolerance không thực sự quan trọng  trong hệ thống máy tính phân tán, nó sẽ kết hợp với hoặc Consistency hoặc Availability tùy vào mục đích sử dụng của thống. Việc xây dựng hệ thống lưu trữ phục vụ cho 1 khối lượng công việc cụ thể sẽ tốt hơn là xây dựng để hỗ cho tất cả khối lượng công việc.
+ 
+Swift đảm bảo được tính sẵn có và khả năng chịu phân vùng. Nghĩa là Swift sẽ xử lý khối lượng công việc cần thiết để lưu trữ 1 lượng lớn các dữ liệu phi cấu trúc. Điều này cho phép Swift rất bền vững và có tính sẽ sàng rất cao
+
+
+
+
 
 
 
