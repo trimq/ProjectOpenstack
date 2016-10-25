@@ -13,6 +13,8 @@
 	- [5.1 Lợi ích của SDS](#51)
 - [6. Tại sao lại lựa chọn Swift?](#6)
 - [7. Kết luận](#7)
+- [8. Giải thích 1 số thuật ngữ](#8)
+- [9. Nguồn tham khảo](#9)
 
 --------------------------------------------------------
 
@@ -160,6 +162,77 @@ Swift ngày càng được nhiều người đóng góp phát triển nhanh mạ
 Sự thay đổi của các dạng lưu trữ và các kiểu dữ liệu bởi sự xuất hiện của web và ứng dụng di động làm tăng lượng dữ liệu do người dùng, các nhà sản xuất,cung cấp dịch vụ...làm lượng dữ liệu tăng lên nhanh chóng. Để đáp ứng được như cầu đó cần phát triển 1 kiến trúc lưu trữ mới là SDS giúp cho hệ thống lưu trữ trở nên linh hoạt hơn giảm chi phí xây dựng hệ thống, không cần quá phụ thuộc vào phần cứng
 
 Swift có khả năng đáp ứng được các yêu cầu trên trong việc lưu trữ dữ liệu hiện nay, ở chương tiếp theo sẽ đi sâu vào tính năng, đặc điểm, kiến trúc và lợi ích mà Swift mang lại.
+
+<a name="8"></a>
+##8. Giải thích 1 số thuật ngữ:
+
+- Phần 1:
+<ul>
+<li>Software-define storage(SDS): Phần mềm điều khiển lưu trữ, cho phép hệ thống lưu trữ có thể chạy trên các phần cứng khác nhau</li>
+<li>Unstructure data: Là những kiểu dữ liệu không có 1 mô hình xác định trước như ảnh, video, document...</li>
+<li>Storage capacity: Tải trọng lưu trữ</li>
+<li>Individual component failures: các thành phần bị lỗi (ví dụ như 1 ổ đĩa bị lỗi)</li>
+<li>Storage system’s uptime: thời gian hoạt động của hệ thống lưu trữ</li>
+<li>Devices regardless: các thiết bị khác nhau (laptop, dektop, mobile phone..)</li>
+<li>legal and regulatory: quy định và pháp lý</li>
+</ul>
+
+- Phần 2:
+<ul>
+<li>One-size-fits-all: một kích cỡ phù hợp cho tất cả, được hiểu như 1 giải pháp có thể áp dụng cho mọi hệ thống</li>
+<li>Partition tolerance: Khi kết nối giữa các nodes trong 1 hệ thống bị lỗi, tính năng này chp phép các nodes vẫn có thể hoạt động bình thường (theo CAP)</li>
+<li>CAP theorem: Cho biết rằng 1 hệ thống máy tính phân tán không thể đồng thời thực hiện được 3 chức năng đó là Consistency (tính nhất quán), Availability (tính sẵn sàng cao) và Partition tolerance</li>
+<li>Eventual consistenct: là 1 mô hình nhất quán sử dụng trong hệ thống máy tính phân tán để đảm bảo tính sẵn sàng cao, ví dụ: khi có 1 bản update thì tất cả đều sẽ nhận được. Ở đây được hiểu là Swift sẽ ưu tiên sử dụng 2 tính năng Availability và Partition tolerance trước khi dùng Consistency</li>
+</ul>
+
+- Phần 3:
+<ul>
+<li>Single namespace: Object storage cung cấp 1 single namespace là nơi để tiện cho việc quản lý</li>
+</ul>
+
+- Phần 4:
+<ul>
+<li>Mainframe: Mainframe là một loại máy tính thường được sử dụng bởi các công ty, tập đoàn cũng như những tổ chức chính phủ nhằm phục vụ cho các công việc cần xử lí lượng lớn dữ liệu</li>
+<li>In-line controller: Trong đường để quản lý</li>
+<li>Maintenance contracts: các hợp đồng bảo trì hệ thống</li>
+<li>Sea change in: sự thay đổi lớn</li>
+</ul>
+
+- Phần 5:
+<ul>
+<li>Pools of routers</li>
+<li>protection schemes: các đề án để bảo vệ dữ liệu trong hệ thống</li>
+<li>Alternative: thay thế</li>
+<li>Orchestrate: sắp xếp</li>
+<li>Separation: tách biệt</li>
+</ul>
+
+- Phần 6:
+<ul>
+<li>Simultaneous: cùng 1 lúc</li>
+<li>Commodity hardware: các phần cứng thông thường của các hãng sản xuất</li>
+<li>Monolithic system: hệ thống nguyên khối</li>
+<li>Widespread: lan rộng</li>
+</ul>
+
+<a name="9"></a>
+##9. Nguồn tham khảo:
+
+- https://www.quora.com/What-is-the-difference-between-availability-and-partition-tolerance-in-CAP
+
+- Openstack Swift - Joe Arnold&Member of the SwiftStack team
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
