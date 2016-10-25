@@ -19,6 +19,7 @@
 --------------------------------------------------------
 
 ##Mở đầu:
+
 - Năm 2011, Openstack Object Storage gọi là Swift được giới thiệu như là 1 sản phẩm rất tốt để giải quyết vấn đề về sự gia tăng dữ liệu 1 cách nhanh chóng. 
 - SDS với hệ thống như là Openstack Swift được phát triển, Object storage và SDS được xem như là bước logic tiếp theo trong sự phát triển của lưu trữ.
 - Trước khi đi vào Swift, phần này sẽ nói về sự bùng nổ dữ liệu unstructured và sự so sánh Object storage với Block storage và filestorage.
@@ -31,6 +32,7 @@ Ngày nay nhu cầu sử dụng và truy cập dữ liệu của các công ty v
 như online video, gaming, Software-as-a-Service...Khiến cho hệ thống lưu trữ cần được mở rộng để phát triển và truy cập dễ dàng. Unstructures data là những dữ liệu không có 1 cấu trúc nhất
  định như là image, videos, documents...được lưu trữ dưới dạng file trái với kiểu dữ liệu được truy cập trong database (thường là dữ liệu có cấu trúc). 
  Những dữ liệu này được tạo ra bởi rất nhiều các thiết bị được kết nối với internet
+ 
  
  
 <a name="11"></a>
@@ -58,6 +60,7 @@ Lưu trữ unstructured data cần đảm bảo được 4 yếu tố sau: Durab
 	Với nguồn tài chính lớn, các vấn đề về hệ thống lưu trữ sẽ được giải quyết, tuy nhiên do có nhiều hạn chế nên việc lưu trữ cần có giá thành rẻ. Những công ty hiện nay cần biết những chi phí để đầu tư cho hệ thống lưu trữ 
 
 
+
 <a name="2"></a>
 ##2. No One-Size-Fits-All Storage System:
 Giải pháp one-size-fits-all là rất hay tuy nhiên mỗi hệ thống lưu trữ cần có giải pháp riêng phù hợp với yêu cầu và hoàn cảnh cụ thể theo định lý CAP. 
@@ -80,6 +83,7 @@ Khi triển khai thực tế 1 hệ thống máy tính phân tán, ta sẽ phả
 Swift đảm bảo được tính sẵn có và khả năng chịu phân vùng. Nghĩa là Swift sẽ xử lý khối lượng công việc cần thiết để lưu trữ 1 lượng lớn các dữ liệu phi cấu trúc. Điều này cho phép Swift rất bền vững và có tính sẽ sàng rất cao
 
 
+
 <a name="3"></a>
 ##3. So sánh Object storage với những loại lưu trữ khác:
 
@@ -96,6 +100,8 @@ Object không sử dụng cách truy cập như block, Object truy cập thông 
 
 Hệ thống object storage sẽ được cung cấp 1 single namespace, giúp cho hệ thống không cần chia nhỏ dữ liệu và gửi các phần đó tới các nơi lưu trữ khác nhau. Việc này giúp hệ thống có khả năng quản lý rất tốt và tận dụng được tối đa nguồn lực lưu trữ.
 
+
+
 <a name="4"></a>
 ##4. Kiến trúc lưu trữ kiểu mới: SDS (Software-Define Storage)
 
@@ -108,6 +114,8 @@ Quy mô của unstructured cần 1 sự thay đổi lớn trong cấu trúc lưu
 SDS đặt ra sự đảm bảo cho hệ thống trong phần mềm, SDS thay vì kiểm ngăn chặn lỗi thì nó sẽ chấp nhận lỗi xảy ra trong quá trình hoạt động và làm việc thông qua hoặc xung quanh những lỗi đó
 
 Dữ liệu Unstructured data đã vượt hơn structure data về tổng lượng lưu trữ và lợi nhuận mang lại nên giải pháp lưu trữ sử dụng SDS, giải pháp này giúp cho hệ thống có thể mở rộng, tăng khả năng chịu lỗi, có thể kết hợp nhiều phần cứng khác nhau trong 1 hệ thống
+
+
 
 <a name="5"></a>
 ##5. Các thành phần của SDS:
@@ -141,6 +149,8 @@ Có vai trò điều phối truy cập vào các nodes lưu trữ, tách biệt 
 
 -  Giải pháp SDS thường là mã nguồn mở, giúp cho người dùng có nhiều công cụ và tránh việc phải bó buộc vào 1 nhà sản xuất. Giúp cho chúng ta có thể xây dựng các ứng dụng có thể tương thích với nhiều phần cứng hơn.
 
+
+
 <a name="6"></a>
 ##6. Tại sao lại lựa chọn Swift?
 
@@ -156,12 +166,16 @@ Swift ngày càng được nhiều người đóng góp phát triển nhanh mạ
 
 - Swift phù hợp với rất nhiều ứng dụng ngày nay và đang được phát triển thành 1 chuẩn lưu trữ
 
+
+
 <a name="7"></a>
 ##7. Kết luận:
 
 Sự thay đổi của các dạng lưu trữ và các kiểu dữ liệu bởi sự xuất hiện của web và ứng dụng di động làm tăng lượng dữ liệu do người dùng, các nhà sản xuất,cung cấp dịch vụ...làm lượng dữ liệu tăng lên nhanh chóng. Để đáp ứng được như cầu đó cần phát triển 1 kiến trúc lưu trữ mới là SDS giúp cho hệ thống lưu trữ trở nên linh hoạt hơn giảm chi phí xây dựng hệ thống, không cần quá phụ thuộc vào phần cứng
 
 Swift có khả năng đáp ứng được các yêu cầu trên trong việc lưu trữ dữ liệu hiện nay, ở chương tiếp theo sẽ đi sâu vào tính năng, đặc điểm, kiến trúc và lợi ích mà Swift mang lại.
+
+
 
 <a name="8"></a>
 ##8. Giải thích 1 số thuật ngữ:
