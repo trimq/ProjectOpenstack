@@ -127,7 +127,7 @@ Thành phần của SDS, bao gồm 4 thành phần Storage routing, Storage resi
 -<b>Physical hardware</b>:
 Các phần cứng vật lý lưu trữ các bits trên đĩa, các nodes lưu trữ dữ liệu không chịu trách nhiệm đảm bảo độ bền của dữ liệu mà nó là nhiệm vụ của Storage resilience
 
--<b>Out-of-band controller</b>:
+<b>- Out-of-band controller</b>:
 Có vai trò điều phối truy cập vào các nodes lưu trữ, tách biệt ra khỏi hệ thống lưu trữ. Có thể tự động điều chỉnh để tăng hiệu suất làm việc của các nodes như tăng khả năng phục hồi dữ liệu khi có nodes bị fail, sắp xếp tài nguyên trên các node lưu trữ, kết nối mạng, định tuyến và dịch vụ cho toàn bộ cụm 
 
 <a name="51"></a>
