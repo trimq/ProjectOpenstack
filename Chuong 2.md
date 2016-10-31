@@ -40,7 +40,7 @@ Swift có 11 đặc tính chính:
 Scalablity là khả năng mở rộng, Swift được thiết kế để có thể mở rộng dựa vào lượng dữ liệu cần được lưu trữ và số người dùng cần được phục vụ. 
 Từ 1 hệ thống nhỏ 1 vài nodes có thể mở rộng thành 1 hệ thống lớn hơn với hàng ngàn máy, giúp cho hệ thống luôn hoạt động ổn định
 
--<b>Durability</b>
+-<b>Durability</b>:</n>
 Durability là khả năng mở rộng, Swift cung cấp 1 kiến trúc mới cho phép cung cấp 1 độ đảm bảo cho dữ liệu luôn sẵn sàng và toàn vẹn. 
 Để làm việc này, Swift sẽ sao chép dữ liệu và phân tán chúng tới các nodes khác. Sẽ có 1 quá trình được chạy để kiểm tra xem có đủ số bản sao chép của dữ liệu hay 
 không hay dữ liệu có được đảm bảo tốt hay không
