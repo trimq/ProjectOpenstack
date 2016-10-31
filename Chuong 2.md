@@ -34,13 +34,13 @@ Swift được thiết kế để lưu trữ 1 lượng lớn dữ liệu unstru
  
 <a name="12"></a>
 ###1.2 Những đặc tính chính của Swift:
-
 Swift có 11 đặc tính chính:
+
 -<b>Scalablity</b>:
 Scalablity là khả năng mở rộng, Swift được thiết kế để có thể mở rộng dựa vào lượng dữ liệu cần được lưu trữ và số người dùng cần được phục vụ. 
 Từ 1 hệ thống nhỏ 1 vài nodes có thể mở rộng thành 1 hệ thống lớn hơn với hàng ngàn máy, giúp cho hệ thống luôn hoạt động ổn định
 
--<b>Durability</b>:</n>
+-<b>Durability</b>:<n>
 Durability là khả năng mở rộng, Swift cung cấp 1 kiến trúc mới cho phép cung cấp 1 độ đảm bảo cho dữ liệu luôn sẵn sàng và toàn vẹn. 
 Để làm việc này, Swift sẽ sao chép dữ liệu và phân tán chúng tới các nodes khác. Sẽ có 1 quá trình được chạy để kiểm tra xem có đủ số bản sao chép của dữ liệu hay 
 không hay dữ liệu có được đảm bảo tốt hay không
@@ -51,7 +51,7 @@ Multi-regional capability là khả năng đa khu vực,
 <li>Swift có khả năng phân phối dữ liệu tới những khu vực lưu trữ khác nhau ( có thể làm tăng latency). 
 Điều này giúp cho tính sẵn sàng của dữ liệu, có thể truy cập ở các vùng khác nhau. Hoặc là có thể định rõ 1 khu vực để khôi phục khi có sự cố</li>
 <li>Swift thực hiện việc phân phối dữ liệu dựa trên regions va zones trong 1 cluster. Việc Swift sử dụng regions và zones cho phép sap chép dữ liệu ra toàn cụm cluster, 
-khi có hỏng hóc hoặc sự cố tại 1 zones thì cluster vẫn hoạt động bình thường và đảm bảo tính toàn vẹn và sẵn sàng của hệ thống<li>
+khi có hỏng hóc hoặc sự cố tại 1 zones thì cluster vẫn hoạt động bình thường và đảm bảo tính toàn vẹn và sẵn sàng của hệ thống</li>
 </ul>
 
 -<b>High concurrency </b>:
